@@ -1,6 +1,10 @@
 exports.BowlingGame =
 class BowlingGame
     constructor: ->
+        @theScore = 0
         
     score: ->
-        0
+        @theScore
+        
+    roll: (n) ->
+        @theScore += n
