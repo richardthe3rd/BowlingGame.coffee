@@ -12,10 +12,9 @@ describe 'A Bowling Game', ->
         _(20).times -> game.roll 1
         expect(game.score()).toEqual 20
         
-    xit 'that has one spare scores 29.', ->
+    it 'that has one spare scores 29.', ->
         game = new BowlingGame()
         game.roll 5
         game.roll 5
         _(18).times -> game.roll 1
         expect(game.score()).toEqual 29
-        
