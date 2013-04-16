@@ -2,7 +2,7 @@
 {_}           = require('underscore')
 
 describe 'A Bowling Game', ->
-    it 'that is a gutter game scores zero.', ->
+    it 'that is a gutter game scores 0.', ->
         game = new BowlingGame()
         _(20).times -> game.roll 0
         expect(game.score()).toEqual 0
@@ -18,3 +18,10 @@ describe 'A Bowling Game', ->
         game.roll 5
         _(18).times -> game.roll 1
         expect(game.score()).toEqual 29
+
+    it 'that has one strike scores 30.', ->
+        game = new BowlingGame()
+        game.roll 10
+        _(18).times -> game.roll 1
+        expect(game.score()).toEqual 30
+        
